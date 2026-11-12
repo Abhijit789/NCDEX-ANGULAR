@@ -1,12 +1,19 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+// import { Parent } from './parent/parent';
+import { Form } from './form/form';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [Form],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('angular-app');
+  title = signal('angular-app');
+  name:string="ajay";
+  greet():void{
+     this.name="vijay"
+     console.log(this.name);
+     
+  }
 }
